@@ -1,0 +1,114 @@
+.document-journal-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.document-journal-toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: #ece9d8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.document-journal-toolbar button {
+  width: 26px;
+  height: 24px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.document-journal-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.document-journal-grid {
+  flex: 1;
+  overflow: auto;
+  font-size: 0.8rem;
+}
+
+.document-journal-grid-header,
+.document-journal-row {
+  display: grid;
+  grid-template-columns: 24px 110px 1fr;
+}
+
+.document-journal-grid-header {
+  background: #ece9d8;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+}
+
+.document-journal-grid-header > div,
+.document-journal-row > div {
+  padding: 2px 6px;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.document-journal-col-handle {
+  background: #ece9d8;
+  justify-content: center;
+}
+
+.document-journal-col-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.document-journal-row-selected .document-journal-col-date,
+.document-journal-row-selected .document-journal-col-number {
+  background: #316ac5;
+  color: #fff;
+}
+
+.document-journal-icon {
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  background: #ffd76b;
+  border: 1px solid #8a6d1f;
+  border-radius: 1px;
+}
+
+.document-journal-empty {
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.85rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .document-journal-toolbar {
+    background: #3a3a3a;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .document-journal-grid-header {
+    background: #3a3a3a;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .document-journal-grid-header > div,
+  .document-journal-row > div {
+    border-right-color: rgba(255, 255, 255, 0.12);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .document-journal-col-handle {
+    background: #3a3a3a;
+  }
+
+  .document-journal-empty {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

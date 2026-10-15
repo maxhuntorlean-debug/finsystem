@@ -1,0 +1,122 @@
+.account-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-dialog {
+  width: 300px;
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.account-dialog-titlebar {
+  padding: 0.35em 0.6em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.account-dialog-body {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.account-dialog-body > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.account-dialog-body input[type="text"],
+.account-dialog-body > label > input:not([type="checkbox"]):not([type="radio"]) {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.account-dialog-body input:disabled {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.account-dialog-type {
+  padding: 0.5em 0.6em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.account-dialog-type legend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0.3em;
+}
+
+.account-dialog-type label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.account-dialog-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.8rem;
+  font-weight: 400 !important;
+  cursor: pointer;
+}
+
+.account-dialog-actions {
+  display: flex;
+  gap: 0.5em;
+  padding: 0 1em 1em;
+}
+
+.account-dialog-actions button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4em 1.2em;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .account-dialog {
+    background: #2b2b2b;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .account-dialog-body input:not([type="checkbox"]):not([type="radio"]) {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .account-dialog-body input:disabled {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .account-dialog-type {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}

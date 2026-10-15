@@ -1,0 +1,12 @@
+/**
+ * Static hosting for the Configurator PWA build.
+ * Talks to the shared API Worker (finsystem) over CORS — no bindings needed here.
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "finsystem-configurator",
+	"compatibility_date": "2026-09-16",
+	"assets": {
+		"directory": "./dist"
+	}
+}

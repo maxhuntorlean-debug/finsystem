@@ -1,0 +1,133 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+  user-select: text;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.app-header {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.tree-panel {
+  width: 280px;
+  flex-shrink: 0;
+  overflow: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fdfdfd;
+}
+
+.editor-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.app-tabs {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.app-tab {
+  padding: 0.4em 1.2em;
+  font-size: 0.8rem;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.app-tab:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.app-tab-active {
+  background: rgba(49, 106, 197, 0.12);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+  .app-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tree-panel {
+    background: #262626;
+    border-right-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .editor-panel {
+    background: #1e1e1e;
+  }
+
+  .app-tabs {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .app-tab {
+    border-right-color: rgba(255, 255, 255, 0.1);
+  }
+}

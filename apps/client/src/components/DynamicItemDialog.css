@@ -1,0 +1,219 @@
+.dynamic-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dynamic-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ece9d8;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.dynamic-form-titlebar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.5em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dynamic-form-icon {
+  flex-shrink: 0;
+  width: 12px;
+  height: 11px;
+  background: #ffd76b;
+  border: 1px solid #8a6d1f;
+  border-radius: 1px;
+}
+
+.dynamic-form-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dynamic-form-controls {
+  flex-shrink: 0;
+  display: flex;
+  gap: 2px;
+}
+
+.dynamic-form-titlebtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 14px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+  background: #d9d9d9;
+  border: 1px solid #7a7a7a;
+  color: #000;
+  cursor: default;
+}
+
+.dynamic-form-titlebtn-close {
+  cursor: pointer;
+}
+
+.dynamic-form-titlebtn-close:hover {
+  background: #d8453f;
+  border-color: #d8453f;
+  color: #fff;
+}
+
+.dynamic-form-body {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.dynamic-form-label,
+.dynamic-form-button,
+.dynamic-form-input {
+  position: absolute;
+  font-family: inherit;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+.dynamic-form-label {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dynamic-form-button {
+  cursor: pointer;
+}
+
+.dynamic-form-input {
+  padding: 2px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.dynamic-form-input:disabled {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.dynamic-form-checkbox {
+  position: absolute;
+  width: auto !important;
+  height: auto !important;
+  margin: 0;
+}
+
+.dynamic-form-refinput {
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.dynamic-form-refinput-text {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 2px 4px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.dynamic-form-refinput-text:focus {
+  outline: none;
+}
+
+.dynamic-form-refinput-btn {
+  flex-shrink: 0;
+  width: 22px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.35);
+  background: linear-gradient(#fdfdfd, #e2e2e2);
+}
+
+.dynamic-form-refinput-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.dynamic-form-refinput-disabled {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dynamic-form-refinput-disabled .dynamic-form-refinput-text {
+  cursor: default;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dynamic-form {
+    background: #3a3a3a;
+  }
+
+  .dynamic-form-input {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .dynamic-form-input:disabled {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .dynamic-form-refinput {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: #1e1e1e;
+  }
+
+  .dynamic-form-refinput-text {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .dynamic-form-refinput-btn {
+    border-left-color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(#3a3a3a, #2a2a2a);
+    color: #f0f0f0;
+  }
+
+  .dynamic-form-refinput-disabled {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .dynamic-form-refinput-disabled .dynamic-form-refinput-text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .dynamic-form-titlebtn {
+    background: #555;
+    border-color: #888;
+    color: #eee;
+  }
+}

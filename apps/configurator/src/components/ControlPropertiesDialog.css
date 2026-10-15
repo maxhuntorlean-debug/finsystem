@@ -1,0 +1,160 @@
+.control-props-dialog {
+  position: fixed;
+  z-index: 3000;
+  width: 360px;
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.control-props-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35em 0.5em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: move;
+  user-select: none;
+}
+
+.control-props-close {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.control-props-close:hover {
+  background: #d8453f;
+  border-color: #d8453f;
+  color: #fff;
+}
+
+.control-props-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  background: #ece9d8;
+}
+
+.control-props-tab {
+  padding: 0.35em 0.8em;
+  font-family: inherit;
+  font-size: 0.75rem;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.control-props-tab:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.control-props-tab-active {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+.control-props-content {
+  display: flex;
+  gap: 0.75em;
+  padding: 0.9em;
+}
+
+.control-props-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.control-props-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.control-props-fields input[type="text"],
+.control-props-fields > label > input:not([type="checkbox"]) {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.control-props-checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.5em !important;
+  font-weight: 400 !important;
+}
+
+.control-props-checkbox-disabled {
+  opacity: 0.45;
+}
+
+.control-props-hint {
+  margin: -0.3em 0 0;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.3;
+}
+
+.control-props-warning {
+  color: #c0392b;
+}
+
+.control-props-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  width: 90px;
+}
+
+.control-props-actions button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.35em 0;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .control-props-dialog {
+    background: #2b2b2b;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .control-props-tabs {
+    background: #3a3a3a;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .control-props-tab-active {
+    background: #2b2b2b;
+  }
+
+  .control-props-fields input:not([type="checkbox"]) {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .control-props-hint {
+    color: rgba(255, 255, 255, 0.55);
+  }
+}

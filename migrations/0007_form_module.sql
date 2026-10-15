@@ -1,0 +1,1 @@
+ALTER TABLE catalog_forms ADD COLUMN module TEXT NOT NULL DEFAULT '';

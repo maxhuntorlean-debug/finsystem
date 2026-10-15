@@ -1,0 +1,84 @@
+.document-item-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-item-dialog {
+  width: 300px;
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.document-item-dialog-titlebar {
+  padding: 0.35em 0.6em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.document-item-dialog-body {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.document-item-dialog-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.document-item-dialog-body input {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.document-item-dialog-body input:disabled {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.document-item-dialog-actions {
+  display: flex;
+  gap: 0.5em;
+  padding: 0 1em 1em;
+}
+
+.document-item-dialog-actions button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4em 1.2em;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .document-item-dialog {
+    background: #2b2b2b;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .document-item-dialog-body input {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .document-item-dialog-body input:disabled {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

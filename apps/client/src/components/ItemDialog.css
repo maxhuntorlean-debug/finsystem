@@ -1,0 +1,141 @@
+.item-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-dialog {
+  width: 300px;
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.item-dialog-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.5em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.item-dialog-icon {
+  flex-shrink: 0;
+  width: 12px;
+  height: 11px;
+  background: #ffd76b;
+  border: 1px solid #8a6d1f;
+  border-radius: 1px;
+}
+
+.item-dialog-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-dialog-controls {
+  flex-shrink: 0;
+  display: flex;
+  gap: 2px;
+}
+
+.item-dialog-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 14px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+  background: #d9d9d9;
+  border: 1px solid #7a7a7a;
+  color: #000;
+  cursor: default;
+}
+
+.item-dialog-btn-close {
+  cursor: pointer;
+}
+
+.item-dialog-btn-close:hover {
+  background: #d8453f;
+  border-color: #d8453f;
+  color: #fff;
+}
+
+.item-dialog-body {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.item-dialog-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.item-dialog-body input {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.item-dialog-body input:disabled {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.item-dialog-actions {
+  display: flex;
+  gap: 0.5em;
+  padding: 0 1em 1em;
+}
+
+.item-dialog-actions button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4em 1.2em;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .item-dialog {
+    background: #2b2b2b;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .item-dialog-body input {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .item-dialog-body input:disabled {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .item-dialog-btn {
+    background: #555;
+    border-color: #888;
+    color: #eee;
+  }
+}

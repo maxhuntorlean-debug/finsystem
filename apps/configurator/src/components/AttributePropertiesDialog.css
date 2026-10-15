@@ -1,0 +1,107 @@
+.attr-props {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.attr-props-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.9em;
+}
+
+.attr-props-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  min-width: 0;
+}
+
+.attr-props-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.attr-props-fields input:not([type="checkbox"]),
+.attr-props-fields select {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.35em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+  background: #fff;
+}
+
+.attr-props-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.9em;
+  flex-wrap: wrap;
+}
+
+.attr-props-length {
+  flex: 0 0 auto;
+}
+
+.attr-props-length input {
+  width: 3.5em;
+}
+
+.attr-props-checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.4em !important;
+  font-weight: 400 !important;
+  white-space: nowrap;
+  padding-bottom: 0.4em;
+}
+
+.attr-props-checkbox-disabled {
+  opacity: 0.45;
+}
+
+.attr-props-hint {
+  margin: -0.3em 0 0;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.3;
+}
+
+.attr-props-warning {
+  color: #c0392b;
+}
+
+.attr-props-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding-top: 0.9em;
+  margin-top: auto;
+}
+
+.attr-props-actions button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.35em 1.2em;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .attr-props-fields input:not([type="checkbox"]),
+  .attr-props-fields select {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .attr-props-hint {
+    color: rgba(255, 255, 255, 0.55);
+  }
+}

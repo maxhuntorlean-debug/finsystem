@@ -1,0 +1,1 @@
+ALTER TABLE catalogs ADD COLUMN edit_mode TEXT NOT NULL DEFAULT 'list';

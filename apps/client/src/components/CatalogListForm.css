@@ -1,0 +1,139 @@
+.catalog-list-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.catalog-list-toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: #ece9d8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.catalog-list-toolbar button {
+  width: 26px;
+  height: 24px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.catalog-list-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.catalog-list-pick-button {
+  width: auto !important;
+  padding: 0 0.7em;
+  margin-left: auto;
+}
+
+.catalog-grid {
+  flex: 1;
+  overflow: auto;
+  font-size: 0.8rem;
+}
+
+.catalog-grid-header,
+.catalog-grid-row {
+  display: grid;
+  grid-template-columns: 24px 70px 1fr;
+}
+
+.catalog-grid-header {
+  background: #ece9d8;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+}
+
+.catalog-grid-header > div,
+.catalog-grid-row > div {
+  padding: 2px 6px;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-grid-col-handle {
+  background: #ece9d8;
+  justify-content: center;
+}
+
+.catalog-grid-col-code {
+  justify-content: flex-end;
+  font-variant-numeric: tabular-nums;
+}
+
+.catalog-grid-row-selected .catalog-grid-col-code,
+.catalog-grid-row-selected .catalog-grid-col-name {
+  background: #316ac5;
+  color: #fff;
+}
+
+.catalog-grid-col-name input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+
+.catalog-grid-col-name input:focus {
+  outline: none;
+}
+
+.catalog-grid-name-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.catalog-grid-icon {
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  background: #ffd76b;
+  border: 1px solid #8a6d1f;
+  border-radius: 1px;
+}
+
+.catalog-list-form-empty {
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.85rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .catalog-list-toolbar {
+    background: #3a3a3a;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .catalog-grid-header {
+    background: #3a3a3a;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .catalog-grid-header > div,
+  .catalog-grid-row > div {
+    border-right-color: rgba(255, 255, 255, 0.12);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .catalog-grid-col-handle {
+    background: #3a3a3a;
+  }
+
+  .catalog-list-form-empty {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

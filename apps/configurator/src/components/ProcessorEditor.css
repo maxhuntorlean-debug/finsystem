@@ -1,0 +1,65 @@
+.processor-editor {
+  padding: 0.9em 0.75em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.processor-editor-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.processor-editor-row > span {
+  flex-shrink: 0;
+  width: 110px;
+}
+
+.processor-editor-warning {
+  margin: -0.35em 0 0;
+  font-size: 0.72rem;
+  color: #c0392b;
+  line-height: 1.3;
+}
+
+.processor-editor-row input {
+  flex: 1;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.3em 0.45em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  font-weight: 400;
+  background: #fff;
+}
+
+.processor-editor-footer {
+  margin-top: 0.4em;
+  padding-top: 0.75em;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 0.5em;
+}
+
+.processor-editor-footer button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.35em 1em;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .processor-editor-row input {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .processor-editor-footer {
+    border-top-color: rgba(255, 255, 255, 0.2);
+  }
+}

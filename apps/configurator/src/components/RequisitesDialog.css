@@ -1,0 +1,118 @@
+.requisites-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.requisites-dialog {
+  width: 300px;
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.requisites-dialog-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35em 0.5em;
+  background: linear-gradient(#7d9fd6, #4b6fb0);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.requisites-dialog-close {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.requisites-dialog-close:hover {
+  background: #d8453f;
+  border-color: #d8453f;
+  color: #fff;
+}
+
+.requisites-dialog-body {
+  padding: 0.75em 0.9em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.requisites-list-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.requisites-list {
+  min-height: 100px;
+  max-height: 140px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.requisites-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.2em 0.4em;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.requisites-row-selected {
+  background: #316ac5;
+  color: #fff;
+}
+
+.requisites-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.requisites-dialog-actions {
+  display: flex;
+  gap: 0.5em;
+  padding: 0 0.9em 0.9em;
+}
+
+.requisites-dialog-actions button {
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 0.35em 0.9em;
+  cursor: pointer;
+}
+
+.requisites-dialog-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+  .requisites-dialog {
+    background: #2b2b2b;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .requisites-list {
+    background: #1e1e1e;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
